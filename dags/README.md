@@ -1,0 +1,1 @@
+This folder contains the Apache Airflow DAG used to orchestrate the Northwind ETL pipeline. The DAG automates the workflow execution between Bronze, Silver, Gold, and Snowflake stages using PySpark jobs running inside Docker containers.
