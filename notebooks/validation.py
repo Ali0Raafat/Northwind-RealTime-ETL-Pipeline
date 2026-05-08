@@ -76,9 +76,9 @@ def check_required_columns(df, table_name):
     ]
 
     if missing_cols:
-        print(f"❌ Missing columns: {missing_cols}")
+        print(f"Missing columns: {missing_cols}")
     else:
-        print("✅ All required columns exist.")
+        print("All required columns exist.")
 
 
 def check_empty_columns(df, table_name):
@@ -93,9 +93,9 @@ def check_empty_columns(df, table_name):
             empty_cols.append(col_name)
 
     if empty_cols:
-        print(f"❌ Empty columns found: {empty_cols}")
+        print(f"Empty columns found: {empty_cols}")
     else:
-        print("✅ No fully empty columns found.")
+        print("No fully empty columns found.")
 
 
 def check_null_values(df, table_name):
@@ -126,9 +126,9 @@ def check_fully_null_rows(df, table_name):
     null_rows = df.filter(~condition).count()
 
     if null_rows > 0:
-        print(f"❌ Fully null business rows found: {null_rows}")
+        print(f"Fully null business rows found: {null_rows}")
     else:
-        print("✅ No fully null business rows found.")
+        print("No fully null business rows found.")
 
 
 def check_duplicate_business_keys(df, table_name):
@@ -154,10 +154,10 @@ def check_duplicate_business_keys(df, table_name):
     duplicate_rows = duplicate_rows if duplicate_rows is not None else 0
 
     if duplicate_groups > 0:
-        print(f"❌ Duplicate business key groups found: {duplicate_groups}")
-        print(f"❌ Duplicate extra rows found: {duplicate_rows}")
+        print(f"Duplicate business key groups found: {duplicate_groups}")
+        print(f"Duplicate extra rows found: {duplicate_rows}")
     else:
-        print("✅ No duplicate business keys found.")
+        print("No duplicate business keys found.")
 
 
 try:
@@ -181,7 +181,7 @@ try:
         check_fully_null_rows(df, table_name)
         check_duplicate_business_keys(df, table_name)
 
-    print("\n✅ Bronze validation finished successfully.")
+    print("\nBronze validation finished successfully.")
 
 except Exception as e:
     print(f"Validation failed: {e}")
