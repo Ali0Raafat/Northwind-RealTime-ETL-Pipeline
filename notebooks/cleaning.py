@@ -42,7 +42,7 @@ def read_bronze(table_name):
 def write_silver(df, table_name):
     output_path = f"{SILVER_BASE_PATH}{TABLES[table_name]}"
     df.write.mode("overwrite").parquet(output_path)
-    print(f"✅ {table_name} written to Silver: {output_path}")
+    print(f"{table_name} written to Silver: {output_path}")
 
 
 def drop_fully_null_rows(df):
@@ -315,7 +315,7 @@ try:
     write_silver(clean_suppliers(read_bronze("suppliers")), "suppliers")
     write_silver(clean_shippers(read_bronze("shippers")), "shippers")
 
-    print("\n✅ Silver Layer created successfully.")
+    print("\nSilver Layer created successfully.")
 
 except Exception as e:
     print(f"Cleaning failed: {e}")
