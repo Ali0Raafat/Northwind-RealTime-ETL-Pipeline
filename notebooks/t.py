@@ -65,7 +65,7 @@ shippers = spark.read.parquet(
     SILVER_BASE_PATH + "northwind_shippers"
 )
 
-print("✅ All Silver tables loaded successfully.")
+print("All Silver tables loaded successfully.")
 
 # ─────────────────────────────────────────────
 # DIM_DATES
@@ -109,7 +109,7 @@ dim_dates.write \
     .mode("overwrite") \
     .parquet(GOLD_BASE_PATH + "dim_dates")
 
-print("✅ dim_dates written to Gold Layer.")
+print("dim_dates written to Gold Layer.")
 
 # ─────────────────────────────────────────────
 # DIM_CUSTOMERS
@@ -134,7 +134,7 @@ dim_customers.write \
     .mode("overwrite") \
     .parquet(GOLD_BASE_PATH + "dim_customers")
 
-print("✅ dim_customers written to Gold Layer.")
+print("dim_customers written to Gold Layer.")
 
 # ─────────────────────────────────────────────
 # DIM_EMPLOYEES
@@ -164,7 +164,7 @@ dim_employees.write \
     .mode("overwrite") \
     .parquet(GOLD_BASE_PATH + "dim_employees")
 
-print("✅ dim_employees written to Gold Layer.")
+print("dim_employees written to Gold Layer.")
 
 # ─────────────────────────────────────────────
 # DIM_PRODUCTS
@@ -197,7 +197,7 @@ dim_products.write \
     .mode("overwrite") \
     .parquet(GOLD_BASE_PATH + "dim_products")
 
-print("✅ dim_products written to Gold Layer.")
+print("dim_products written to Gold Layer.")
 
 # ─────────────────────────────────────────────
 # DIM_SUPPLIERS
@@ -226,7 +226,7 @@ dim_suppliers.write \
     .mode("overwrite") \
     .parquet(GOLD_BASE_PATH + "dim_suppliers")
 
-print("✅ dim_suppliers written to Gold Layer.")
+print("dim_suppliers written to Gold Layer.")
 
 # ─────────────────────────────────────────────
 # DIM_SHIPPERS
@@ -243,7 +243,7 @@ dim_shippers.write \
     .mode("overwrite") \
     .parquet(GOLD_BASE_PATH + "dim_shippers")
 
-print("✅ dim_shippers written to Gold Layer.")
+print("dim_shippers written to Gold Layer.")
 
 # ─────────────────────────────────────────────
 # FACT_ORDERS
@@ -295,13 +295,13 @@ fact_orders.write \
     .mode("overwrite") \
     .parquet(GOLD_BASE_PATH + "fact_orders")
 
-print("✅ fact_orders written to Gold Layer.")
+print("fact_orders written to Gold Layer.")
 
 # ─────────────────────────────────────────────
 # Final Summary
 # ─────────────────────────────────────────────
 print("\n" + "=" * 80)
-print("✅ GOLD STAR SCHEMA CREATED SUCCESSFULLY")
+print("GOLD STAR SCHEMA CREATED SUCCESSFULLY")
 print("=" * 80)
 
 print(f"dim_dates       : {dim_dates.count()}")
