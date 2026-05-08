@@ -61,7 +61,7 @@ def load_table(hdfs_table_name, snowflake_table_name):
         .mode("overwrite") \
         .save()
 
-    print(f"✅ Overwritten {snowflake_table_name} with {row_count} rows")
+    print(f"Overwritten {snowflake_table_name} with {row_count} rows")
 
 
 try:
@@ -72,10 +72,10 @@ try:
     for hdfs_table_name, snowflake_table_name in TABLES.items():
         load_table(hdfs_table_name, snowflake_table_name)
 
-    print("\n✅ ALL GOLD TABLES OVERWRITTEN SUCCESSFULLY IN SNOWFLAKE")
+    print("\nALL GOLD TABLES OVERWRITTEN SUCCESSFULLY IN SNOWFLAKE")
 
 except Exception as e:
-    print(f"❌ Loading failed: {e}")
+    print(f"Loading failed: {e}")
     raise
 
 finally:
