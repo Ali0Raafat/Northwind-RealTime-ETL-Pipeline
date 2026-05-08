@@ -123,23 +123,23 @@ try:
         print(f"Rows: {rows}")
 
         if rows == 0:
-            print("❌ Empty table: 0 rows")
+            print("Empty table: 0 rows")
 
         print(f"Required nulls: {nulls}")
         print(f"Fully null business rows: {fully_null_rows}")
         print(f"Duplicate business keys: {duplicates}")
 
         if table_errors == 0:
-            print("✅ Status: CLEAN")
+            print("Status: CLEAN")
         else:
-            print("❌ Status: NEEDS REVIEW")
+            print("Status: NEEDS REVIEW")
 
     print("\n" + "=" * 80)
 
     if total_errors == 0:
-        print("✅ SILVER VALIDATION PASSED: Cleaning checks passed.")
+        print("SILVER VALIDATION PASSED: Cleaning checks passed.")
     else:
-        print("❌ SILVER VALIDATION FAILED: Some cleaning issues still exist.")
+        print("SILVER VALIDATION FAILED: Some cleaning issues still exist.")
 
     print("=" * 80)
 
